@@ -2,7 +2,7 @@
 #  Script Name:         run_analysis.R
 #  Description:         For detail please see README.md and CodeBook.md
 #  Result:              The result of this script is a tidy data set contained in a 
-#                       file named SmartphoneTidyDataSet.csv in the working directory
+#                       file named SmartphoneTidyDataSet.txt in the working directory
 #  Requirements:        - This script assumes the necessary data is included in the
 #                         working directory, if it is not please download
 #                         and unzip before running this script.  Data can be downloaded
@@ -124,7 +124,7 @@ dfFinalDetail = cbind(dfCombinedSubjects, dfActivityData, dfFinalDetail)
 
 # FOR TESTING ONLY:  Not needed as part of the project but this writes the initial 
 #   tidy data set, 1 record per test
-write.csv(dfFinalDetail, file="SmartphoneOneRecordPerTest.csv")
+write.csv(dfFinalDetail, file="SmartphoneOneRecordPerTest.txt")
 
 # remove fields we don't need
 fieldsToDrop <- c("TestID")
@@ -136,4 +136,4 @@ dtFinalSummarized <- dtFinalSummarized[, lapply(.SD, mean), by="SubjectID,Activi
 dtFinalSummarized <- dtFinalSummarized[order(dtFinalSummarized$SubjectID, dtFinalSummarized$ActivityDescription),]
 
 # write final tidy data set to a file
-write.csv(dtFinalSummarized, file="SmartphoneTidyDataSet.csv", row.names=FALSE)
+write.csv(dtFinalSummarized, file="SmartphoneTidyDataSet.txt", row.names=FALSE)

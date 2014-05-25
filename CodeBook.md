@@ -8,8 +8,8 @@
 * This script averages measurement data for all mean and standard deviation measurements.
 
 ### Script Results:
-  1) SmartphoneOneRecordPerTest.csv - A tidy data set with one row per test performed (total of 10,299 records).  
-  2) SmartphoneTidyDataSet.csv - The final tidy data set for this project, one record per subject and activity with averages for all test measurements (total of 180 records).
+  1) SmartphoneOneRecordPerTest.txt - A tidy data set with one row per test performed (total of 10,299 records) in CSV format.   
+  2) SmartphoneTidyDataSet.txt - The final tidy data set for this project, one record per subject and activity with averages for all test measurements (total of 180 records) in CSV format.
 
 ### Assumptions:
 * The script assumes this data has been downloaded and unzipped into the working directory:
